@@ -1,0 +1,14 @@
+.register .item {
+    display: flex;
+    margin-bottom: 20px;
+}
+.register .item .label {
+    width: 65px;
+}
+.register .item .input {
+    flex: 1;
+    margin-left: 10px;
+}
+.register .item .required {
+    color: red;
+}

@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from "mobx-react";
+import loginStore from './models/store';
 
+// 状态始终需要通过动作来更新(实际上还包括创建)
+// configure({'enforceActions': 'always'});
+const stores = {loginStore}
 ReactDOM.render(
   <React.StrictMode>
+    <Provider {...stores}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
