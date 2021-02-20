@@ -42,7 +42,7 @@ import {login} from '../../remote/login';
                 message.error('用户名或密码不正确');
                 return;
             }
-            window.localStorage.setItem('key',respData.Authentication); // 将tocken存入到local storage
+            window.localStorage.setItem('key',respData.authentication); // 将tocken存入到local storage
             message.success('登录成功');
             this.props.history.push('/homePage/welcome'); // 登陆成功后跳转到首页
         } catch(e) {
